@@ -1,41 +1,32 @@
-//
-//  Alarm.swift
-//  AlermTest
-//
-//  Created by user on 2019/05/29.
-//  Copyright © 2019年 user. All rights reserved.
-//
-
 import UIKit
 
 class Alarm {
     //アラーム設定時間
     var selectedWakeUpTime:Date?
     var sleepTimer: Timer?
-    static var seconds = 0
+    static var time = 0
     weak var delegate: SubViewController?
 
+    //決定ボタンを押したときに実行
     func runTimer() {
-        
-        Alarm.seconds = calulateInterval(userAwakeTime: selectedWakeUpTime!)
-        
+        Alarm.time = calulateInterval(userAwakeTime: selectedWakeUpTime!)
         if sleepTimer == nil {
+            //毎秒updateTimerを実行
             sleepTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateTimer), userInfo: nil, repeats: true)
         }
     }
     
+    //アラーム時間か確認
     @objc private func updateTimer() {
-        if Alarm.seconds != 0 {
-            Alarm.seconds -= 1
-            
+        if Alarm.time != 0 {
+            Alarm.time -= 1
         } else {
-            Alarm.seconds = calulateInterval(userAwakeTime: selectedWakeUpTime!)
+            Alarm.time = calulateInterval(userAwakeTime: selectedWakeUpTime!)
             sleepTimer?.invalidate()
-            sleepTimer = nil
-            
         }
     }
     
+    //現在時間との差から残り時間を返す
     private func calulateInterval(userAwakeTime:Date)-> Int {
         var interval = Int(userAwakeTime.timeIntervalSinceNow)
         if interval < 0 {
@@ -44,21 +35,11 @@ class Alarm {
         
         let calender = Calendar.current
         let seconds = calender.component(.second, from: userAwakeTime)
-        print(interval)
-        print(seconds)
         return interval - seconds
     }
     
-    
-    func stopTimer() {
-        if sleepTimer != nil {
-            sleepTimer!.invalidate()
-            sleepTimer = nil
-        }
-    }
-    
-     func test()-> Int {
-        
-        return Alarm.seconds
+    //アラームまでの時間
+    func timeCheck()-> Int {
+        return Alarm.time
     }
 }

@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CEC2D60022A02FE600A571A3 /* PopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC2D5FF22A02FE600A571A3 /* PopUpViewController.swift */; };
-		CED57CC2229D7F570046299D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED57CC1229D7F570046299D /* AppDelegate.swift */; };
 		CED57CC4229D7F570046299D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED57CC3229D7F570046299D /* ViewController.swift */; };
 		CED57CC7229D7F570046299D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CED57CC5229D7F570046299D /* Main.storyboard */; };
 		CED57CC9229D7F580046299D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CED57CC8229D7F580046299D /* Assets.xcassets */; };
@@ -17,7 +15,8 @@
 		CED57CE2229D7F590046299D /* AlermTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED57CE1229D7F590046299D /* AlermTestUITests.swift */; };
 		CED57CF2229D81FA0046299D /* SubViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED57CF1229D81FA0046299D /* SubViewController.swift */; };
 		CED57CF6229D85E40046299D /* Alarm.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED57CF5229D85E40046299D /* Alarm.swift */; };
-		CED57CF8229D86270046299D /* CurrentTIme.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED57CF7229D86270046299D /* CurrentTIme.swift */; };
+		CED57CF8229D86270046299D /* CurrentTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED57CF7229D86270046299D /* CurrentTime.swift */; };
+		CEEA46FE22A4055900D97EBD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEA46FD22A4055800D97EBD /* AppDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,9 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		CEC2D5FF22A02FE600A571A3 /* PopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpViewController.swift; sourceTree = "<group>"; };
 		CED57CBE229D7F570046299D /* AlermTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AlermTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		CED57CC1229D7F570046299D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CED57CC3229D7F570046299D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		CED57CC6229D7F570046299D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CED57CC8229D7F580046299D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -54,7 +51,8 @@
 		CED57CE3229D7F590046299D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CED57CF1229D81FA0046299D /* SubViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SubViewController.swift; path = Assets.xcassets/AppIcon.appiconset/SubViewController.swift; sourceTree = "<group>"; };
 		CED57CF5229D85E40046299D /* Alarm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alarm.swift; sourceTree = "<group>"; };
-		CED57CF7229D86270046299D /* CurrentTIme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentTIme.swift; sourceTree = "<group>"; };
+		CED57CF7229D86270046299D /* CurrentTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentTime.swift; sourceTree = "<group>"; };
+		CEEA46FD22A4055800D97EBD /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,13 +103,12 @@
 		CED57CC0229D7F570046299D /* AlermTest */ = {
 			isa = PBXGroup;
 			children = (
-				CED57CC1229D7F570046299D /* AppDelegate.swift */,
+				CEEA46FD22A4055800D97EBD /* AppDelegate.swift */,
 				CED57CC3229D7F570046299D /* ViewController.swift */,
 				CED57CC5229D7F570046299D /* Main.storyboard */,
-				CEC2D5FF22A02FE600A571A3 /* PopUpViewController.swift */,
 				CED57CF1229D81FA0046299D /* SubViewController.swift */,
 				CED57CF5229D85E40046299D /* Alarm.swift */,
-				CED57CF7229D86270046299D /* CurrentTIme.swift */,
+				CED57CF7229D86270046299D /* CurrentTime.swift */,
 				CED57CC8229D7F580046299D /* Assets.xcassets */,
 				CED57CCA229D7F580046299D /* LaunchScreen.storyboard */,
 				CED57CCD229D7F580046299D /* Info.plist */,
@@ -269,10 +266,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				CED57CF2229D81FA0046299D /* SubViewController.swift in Sources */,
-				CEC2D60022A02FE600A571A3 /* PopUpViewController.swift in Sources */,
 				CED57CC4229D7F570046299D /* ViewController.swift in Sources */,
-				CED57CC2229D7F570046299D /* AppDelegate.swift in Sources */,
-				CED57CF8229D86270046299D /* CurrentTIme.swift in Sources */,
+				CED57CF8229D86270046299D /* CurrentTime.swift in Sources */,
+				CEEA46FE22A4055900D97EBD /* AppDelegate.swift in Sources */,
 				CED57CF6229D85E40046299D /* Alarm.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -1,11 +1,3 @@
-//
-//  CurrentTIme.swift
-//  AlermTest
-//
-//  Created by user on 2019/05/29.
-//  Copyright © 2019年 user. All rights reserved.
-//
-
 import UIKit
 
 class CurrentTime {
@@ -21,13 +13,12 @@ class CurrentTime {
         }
     }
     
+    //現在時刻表示
     @objc private func updateCurrentTime() {
-        //現在時刻表示
         df.dateFormat = "HH:mm"
         df.timeZone = TimeZone.current
         let timezoneDate = df.string(from: Date())
         currentTime = timezoneDate
         delegate?.updateTime(currentTime!)
     }
-
 }

@@ -1,11 +1,3 @@
-//
-//  AppDelegate.swift
-//  AlermTest
-//
-//  Created by user on 2019/05/28.
-//  Copyright © 2019年 user. All rights reserved.
-//
-
 import UIKit
 
 @UIApplicationMain
